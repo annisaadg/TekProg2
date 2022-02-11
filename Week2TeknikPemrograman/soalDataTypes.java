@@ -19,10 +19,6 @@ public class soalDataType {
     /**
      * This method is used to determine data types.
      * @param args the command line arguments
-     * @param angka This is the first parameter to soalDataType method
-     * @param banyak_input This is the second parameter to soalDataType method
-     * @param index This is the third parameter to soalDataType method
-     * @param testCase This is the third parameter to soalDataType method
      */
     public static void main(String[] args) {
         long angka;
