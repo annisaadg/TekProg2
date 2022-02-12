@@ -1,5 +1,4 @@
 package soalDataType;
-import java.io.*;
 import java.util.Scanner;
 
 /**
@@ -18,22 +17,17 @@ public class soalDataType {
 
     /**
      * This method is used to determine data types.
-     * @param args the command line arguments
+     * @param banyak_input
+     * @return 
      */
-    public static void main(String[] args) {
-        long angka;
-        int banyak_input;
-        int index,testCase;
-        
-        System.out.println("Enter the number of test cases: ");
-        Scanner input = new Scanner(System.in);
-        banyak_input = input.nextInt();
-        
+    public static int dataType(int banyak_input){
+        int index;
         for(index=0; index<banyak_input; index++){
-            testCase = index+1;
+            Scanner input = new Scanner(System.in);
+            int testCase = index+1;
             System.out.println("Test case-"+testCase+", Enter the input: ");
             try{
-                angka = input.nextLong();
+                long angka = input.nextLong();
                 System.out.print(angka);
                 System.out.println(" Can be fitted in: ");
                 if(angka>=Byte.MIN_VALUE && angka<=Byte.MAX_VALUE){
@@ -54,6 +48,18 @@ public class soalDataType {
                 input.nextLine();
             }
         }
+        return 0;
     }
     
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int Case;
+        
+        System.out.println("Enter the number of test cases: ");
+        Scanner input = new Scanner(System.in);
+        Case = input.nextInt();
+        dataType(Case);
+    }
 }
